@@ -1,0 +1,33 @@
+{
+	"name": "ds_dim_habitacion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dw_air",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_habitacion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "room_type",
+				"type": "varchar"
+			},
+			{
+				"name": "superhost",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_HABITACION"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"name": "ds_dim_tiempo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dw_air",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_tiempo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "day_name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_TIEMPO"
+		}
+	}
+}

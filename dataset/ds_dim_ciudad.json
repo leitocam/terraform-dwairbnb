@@ -1,0 +1,39 @@
+{
+	"name": "ds_dim_ciudad",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dw_air",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_ciudad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "city",
+				"type": "varchar"
+			},
+			{
+				"name": "attraction_index",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "restaurant_index",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_CIUDAD"
+		}
+	}
+}

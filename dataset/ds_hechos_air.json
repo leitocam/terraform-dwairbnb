@@ -1,0 +1,70 @@
+{
+	"name": "ds_hechos_air",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dw_air",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_hecho",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_ciudad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_tiempo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_habitacion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_ubicacion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "price",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "cleanliness_rating",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "guest_satisfaction",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "bedrooms",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "person_capacity",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HECHOS_AIRBNB"
+		}
+	}
+}

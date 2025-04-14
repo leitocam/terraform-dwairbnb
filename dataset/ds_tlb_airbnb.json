@@ -1,0 +1,108 @@
+{
+	"name": "ds_tlb_airbnb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_db_air",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DB"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "city",
+				"type": "varchar"
+			},
+			{
+				"name": "price",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "day",
+				"type": "varchar"
+			},
+			{
+				"name": "room_type",
+				"type": "varchar"
+			},
+			{
+				"name": "shared_room",
+				"type": "bit"
+			},
+			{
+				"name": "private_room",
+				"type": "bit"
+			},
+			{
+				"name": "person_capacity",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "superhost",
+				"type": "bit"
+			},
+			{
+				"name": "multiple_rooms",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "business",
+				"type": "bit"
+			},
+			{
+				"name": "cleanliness_rating",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "guest_satisfaction",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "bedrooms",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "city_center_km",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "metro_distance_km",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "attraction_index",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "normalised_attraction_index",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "restaurant_index",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "normalised_restaurant_index",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "AIRBNB_RAW"
+		}
+	}
+}
