@@ -6,7 +6,7 @@
 		"type": "AzureBlobStorage",
 		"typeProperties": {
 			"connectionString": "DefaultEndpointsProtocol=https;AccountName=saucbsisinfoairbnb;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEEyMkM4RDQ3LTA3QzItNEQ0MC04RTdCLUU1NzNEOERDNjQ1MF9jOTQzYWFiMi0yMmY3LTRjMTEtYTE2MS1hYWEzOGE2ZjAzYTgiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDMzNjREQ0UwLUJDOTMtNEM1NC1BMjkxLTQ5QUU2RjBGOUNEMl9hOTNjZWM4NC1iOTE3LTQ4OTgtODNmMi0wNTlmM2ZiOWY5OWEiDQp9"
 		}
 	}
 }
