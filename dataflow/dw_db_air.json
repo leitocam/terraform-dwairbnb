@@ -84,7 +84,6 @@
 				"          day = Day,",
 				"          room_type = {Room Type},",
 				"          person_capacity = {Person Capacity},",
-				"          superhost = Superhost,",
 				"          cleanliness_rating = {Cleanliness Rating},",
 				"          guest_satisfaction = {Guest Satisfaction},",
 				"          bedrooms = Bedrooms,",

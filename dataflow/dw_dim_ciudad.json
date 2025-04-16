@@ -1,0 +1,65 @@
+{
+	"name": "dw_dim_ciudad",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_tlb_airbnb",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_dim_ciudad",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "sort1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          city as string,",
+				"          attraction_index as double,",
+				"          restaurant_index as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     query: 'SELECT DISTINCT\\n    city,\\n    attraction_index,\\n    restaurant_index\\nfrom [dbo].[AIRBNB_RAW]',",
+				"     format: 'query') ~> source1",
+				"source1 sort(asc(attraction_index, true)) ~> sort1",
+				"sort1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          id_ciudad as integer,",
+				"          city as string,",
+				"          attraction_index as double,",
+				"          restaurant_index as double",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          city,",
+				"          attraction_index,",
+				"          restaurant_index",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}
